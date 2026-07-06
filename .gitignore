@@ -1,0 +1,28 @@
+# Code Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Python virtual environments
+.venv/
+.env/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Backup files
+*.bak
