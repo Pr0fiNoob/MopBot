@@ -26,3 +26,9 @@ env/
 
 # Backup files
 *.bak
+
+# Obsidian vault
+obsidian/
+
+# Temp files
+*.tmp
