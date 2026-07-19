@@ -1,4 +1,4 @@
-from mopsloth import app
+from python.mopsloth import app
 from time import *
 
 while True:

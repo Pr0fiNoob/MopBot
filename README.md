@@ -1,31 +1,37 @@
 # MopBot
 
-## MopSlothOS – Python-Teil
+MopBot ist ein experimenteller Bodenreinigungsroboter. Die Python-Software **MopSlothOS** läuft auf einem Raspberry Pi und übernimmt Navigation sowie die übergeordnete Steuerung. Über eine serielle Schnittstelle kommuniziert sie mit einem Arduino, dessen Firmware die Hardware ansteuert.
 
-MopSlothOS ist der Python-Teil des MopBots. Er soll später die übergeordnete
-Steuerung und Navigation übernehmen und über eine serielle Schnittstelle mit
-dem Arduino kommunizieren.
+> **Projektstatus:** Frühphase. Das Repository enthält derzeit nur erste Grundlagen; Software, Firmware und die Elektronik werden schrittweise ergänzt.
 
-Aktuell ist nur die grundlegende Datei- und Ordnerstruktur angelegt. Die
-einzelnen Module werden im weiteren Projektverlauf implementiert.
+## Ziele
+
+- Den Roboter mit einer klaren Zustandsmaschine steuern.
+- Eine zuverlässige und dokumentierte serielle Kommunikation zwischen Raspberry Pi und Arduino entwickeln.
+- Eine sichere Grundlage für Antrieb, Sensoren und Reinigungsfunktion schaffen.
+- Eine einfache Flächennavigation entwickeln, zunächst mit einem Schlangenlinienmuster.
+
+## Konzept
+
+Der Raspberry Pi trifft die übergeordneten Entscheidungen, etwa zur Navigation und zum aktuellen Betriebszustand. Er übermittelt passende Befehle an den Arduino. Die Arduino-Firmware steuert anschliessend die angebundene Hardware wie Motoren, Sensoren oder weitere Aktoren.
+
+## Geplante Repository-Struktur
+
+Die folgende Struktur beschreibt den Zielaufbau des Repositories. Bis alle Teile umgesetzt sind, können einzelne Ordner oder Dateien noch fehlen.
 
 ```text
-mopsloth/
-├── app.py
-├── communication/
-│   ├── protocol.py
-│   └── serial_link.py
-├── control/
-│   ├── safety.py
-│   └── state_machine.py
-├── navigation/
-│   ├── odometry.py
-│   └── serpentine.py
-└── robot/
-    ├── drive_base.py
-    └── sensors.py
-```
-
-## Lizenz
-
-Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE).
+MopBot/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── AGENTS.md
+├── CONTRIBUTING.md
+├── python/
+│
+├── PCBs/
+│   ├── Motor_Shield_v1/
+│   │   └── ... KiCad-Projektdateien
+│   └── ... weitere KiCad-Projekte
+└── arduino-firmware/
+    └── MopBot-firmware/
+        └── MopBot-firmware.ino
