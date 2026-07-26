@@ -32,3 +32,6 @@ obsidian/
 
 # Temp files
 *.tmp
+
+# KiCad
+~*.lck

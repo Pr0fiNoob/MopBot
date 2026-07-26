@@ -9231,6 +9231,18 @@
 		(layer "Edge.Cuts")
 		(uuid "93ebe48c-2f88-4531-a8a5-5f344455d694")
 	)
+	(gr_text "MotorShield v1"
+		(at 101 49.5 0)
+		(layer "F.SilkS")
+		(uuid "f6180fde-0109-4730-8774-9a9435ff1cbd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "ICSP"
 		(at 165.4 72.8 90)
 		(layer "F.SilkS")
