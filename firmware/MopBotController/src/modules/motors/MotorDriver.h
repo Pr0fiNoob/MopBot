@@ -39,10 +39,15 @@ public:
     void setSpeed(uint8_t speed);
 
     /**
-    Engages or disengages the brake.
-    @param engage: True to engage the brake, False to disengage
+    Applies dynamic braking by shorting the motor terminals.
+    @param engage: True to apply brake, False to release
     */
     void brake(bool engage);
+
+    /**
+    Disables all output transistors and lets the motor coast.
+    */
+    void coast();
 
     /**
     Checks if the motor driver is overheated.

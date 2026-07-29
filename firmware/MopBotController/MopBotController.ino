@@ -89,20 +89,21 @@ void updateSafetyState() {
 
     // Send the event only when Fault is entered, not on every loop.
     if (!state.isInState(RobotState::Fault)) {
-        stopMotors(false);
+        mot1.coast();
+        mot2.coast();
         state.transitionTo(RobotState::Fault);
 
         if (mot1Overheated && mot2Overheated) {
             serialComm.sendMessage(
-                "{\"Event\":\"Fault\",\"Reason\":\"BothMotorsOverheated\"}"
+                "{\"Event\":\"Fault\",\"Reason\":\"BothMotorControllersOverheated\"}"
             );
         } else if (mot1Overheated) {
             serialComm.sendMessage(
-                "{\"Event\":\"Fault\",\"Reason\":\"Motor1Overheated\"}"
+                "{\"Event\":\"Fault\",\"Reason\":\"MotorController1Overheated\"}"
             );
         } else {
             serialComm.sendMessage(
-                "{\"Event\":\"Fault\",\"Reason\":\"Motor2Overheated\"}"
+                "{\"Event\":\"Fault\",\"Reason\":\"MotorController2Overheated\"}"
             );
         }
     }
@@ -153,9 +154,6 @@ void processCommand() {
                 serialComm.sendMessage("ERR TRANSITION_TO_DRIVING_NOT_ALLOWED");
                 break;
             }
-
-            mot1.brake(false);
-            mot2.brake(false);
 
             mot1.setSpeed(static_cast<uint8_t>(speed));
             mot2.setSpeed(static_cast<uint8_t>(speed));

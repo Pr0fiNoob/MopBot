@@ -29,17 +29,28 @@ void MotorDriver::setDirection(bool forward) {
 }
 
 void MotorDriver::setSpeed(uint8_t speed) {
+    digitalWrite(brkPin, LOW);
+    delayMicroseconds(1);
     analogWrite(pwmPin, speed);
 }
 
 void MotorDriver::brake(bool engage) {
     if (engage) {
-        // For active braking both the PWM and the brake Pin must be HIGH.
-        digitalWrite(pwmPin, HIGH);
+        // For active braking both the PWM and the brake Pin must be HIGH (or 255).
+        analogWrite(pwmPin, 255);
+        delayMicroseconds(1);
         digitalWrite(brkPin, HIGH);
     } else {
+        analogWrite(pwmPin, 0);
+        delayMicroseconds(1);
         digitalWrite(brkPin, LOW);
     }
+}
+
+void MotorDriver::coast() {
+    analogWrite(pwmPin, 0);
+    delayMicroseconds(1);
+    digitalWrite(brkPin, HIGH);
 }
 
 bool MotorDriver::isOverheated() {
