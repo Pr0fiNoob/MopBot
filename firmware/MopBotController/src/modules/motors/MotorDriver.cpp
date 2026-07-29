@@ -34,6 +34,8 @@ void MotorDriver::setSpeed(uint8_t speed) {
 
 void MotorDriver::brake(bool engage) {
     if (engage) {
+        // For active braking both the PWM and the brake Pin must be HIGH.
+        digitalWrite(pwmPin, HIGH);
         digitalWrite(brkPin, HIGH);
     } else {
         digitalWrite(brkPin, LOW);
