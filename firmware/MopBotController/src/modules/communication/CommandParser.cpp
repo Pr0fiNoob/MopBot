@@ -1,6 +1,6 @@
-#include <Arduino.h>
-#include <string.h>
 #include "CommandParser.h"
+
+#include <string.h>
 
 ParsedCommand CommandParser::parseCommand(char* input) {
     ParsedCommand result {
@@ -14,7 +14,7 @@ ParsedCommand CommandParser::parseCommand(char* input) {
 
     char* commandString = strtok(input, " ");
 
-    result.command  = parseCommandType(commandString);
+    result.command = parseCommandType(commandString);
     result.argument = strtok(nullptr, " ");
 
     return result;
@@ -41,8 +41,16 @@ CommandType CommandParser::parseCommandType(const char* command) {
         return CommandType::Direction;
     }
 
-    if (strcmp(command, "BRAKE") == 0) {
-        return CommandType::Brake;
+    if (strcmp(command, "STOP") == 0) {
+        return CommandType::Stop;
+    }
+
+    if (strcmp(command, "ESTOP") == 0) {
+        return CommandType::EmergencyStop;
+    }
+
+    if (strcmp(command, "RESET") == 0) {
+        return CommandType::Reset;
     }
 
     return CommandType::Unknown;

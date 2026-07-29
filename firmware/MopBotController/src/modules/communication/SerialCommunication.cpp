@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #include "SerialCommunication.h"
 
 SerialCommunication::SerialCommunication(Stream& port)
@@ -11,15 +9,13 @@ SerialCommunication::SerialCommunication(Stream& port)
 
 void SerialCommunication::update() {
     while (serialPort.available() > 0 && !messageAvailable) {
-        char receivedCharacter =
+        const char receivedCharacter =
             static_cast<char>(serialPort.read());
 
-        // Ignore carriage returns.
         if (receivedCharacter == '\r') {
             continue;
         }
 
-        // A newline marks the end of the message.
         if (receivedCharacter == '\n') {
             receiveBuffer[bufferIndex] = '\0';
 
@@ -31,12 +27,11 @@ void SerialCommunication::update() {
             continue;
         }
 
-        // Leave one byte free for the terminating '\0'.
+        // Keep one byte free for the terminating null character.
         if (bufferIndex < BUFFER_SIZE - 1) {
             receiveBuffer[bufferIndex] = receivedCharacter;
             bufferIndex++;
         } else {
-            // Discard messages that are too long.
             bufferIndex = 0;
             receiveBuffer[0] = '\0';
 
@@ -60,4 +55,35 @@ void SerialCommunication::clearMessage() {
 
 void SerialCommunication::sendMessage(const char* message) {
     serialPort.println(message);
+}
+
+void SerialCommunication::sendBoolean(bool value) {
+    if (value) {
+        serialPort.print(F("true"));
+    } else {
+        serialPort.print(F("false"));
+    }
+}
+
+void SerialCommunication::sendStatusJson(
+    const char* state,
+    float motor1Current,
+    bool motor1Overheated,
+    float motor2Current,
+    bool motor2Overheated
+) {
+    serialPort.print(F("{\"State\":\""));
+    serialPort.print(state);
+
+    serialPort.print(F("\",\"Motor1\":{\"MotorCurrent\":"));
+    serialPort.print(motor1Current, 3);
+    serialPort.print(F(",\"isOverheated\":"));
+    sendBoolean(motor1Overheated);
+
+    serialPort.print(F("},\"Motor2\":{\"MotorCurrent\":"));
+    serialPort.print(motor2Current, 3);
+    serialPort.print(F(",\"isOverheated\":"));
+    sendBoolean(motor2Overheated);
+
+    serialPort.println(F("}}"));
 }

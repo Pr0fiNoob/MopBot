@@ -7,7 +7,9 @@ enum class CommandType : uint8_t {
     Status,
     Speed,
     Direction,
-    Brake,
+    Stop,
+    EmergencyStop,
+    Reset,
     Unknown
 };
 
@@ -17,17 +19,17 @@ struct ParsedCommand {
 };
 
 class CommandParser {
-    public:
-        /**
-        Seperates the command and its arguments.
-        @return ParsedCommand struct
-        */
-        ParsedCommand parseCommand(char* input);
-    
-    private:
-        /**
-        Parses a Command-String.
-        @return CommandType Enum
-        */
-        CommandType parseCommandType (const char* command);
+public:
+    /**
+     * Separates the command and its first argument.
+     *
+     * @return ParsedCommand struct
+     */
+    ParsedCommand parseCommand(char* input);
+
+private:
+    /**
+     * Converts a command string into a CommandType value.
+     */
+    CommandType parseCommandType(const char* command);
 };
