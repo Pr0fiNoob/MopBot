@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 3.048,
-          "height": 4.064,
-          "width": 4.064
+          "drill": 1.0,
+          "height": 2.0,
+          "width": 2.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -77,7 +77,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "unconnected_items|118796000|49200000|F.Cu|4|29fcb139-bd4d-46c2-a1ef-edb27596c197|d77e5dcd-ccdf-49c3-9f69-d935575c8538",
+          ""
+        ],
+        [
+          "unconnected_items|121336000|49200000|F.Cu|4|8a2a0c3c-afd3-4fc0-8335-c8cdebe19069|ea5b9dbd-eadf-4ddf-82e3-5d604252f800",
+          ""
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -695,7 +704,7 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "#PWR6-17,J5-7,D1-2,C1-10,11,R1-6,1",
+    "used_designators": "1,R1-6,11,C1-10,D1-2,J5-7,#PWR6-17",
     "variants": []
   },
   "sheets": [

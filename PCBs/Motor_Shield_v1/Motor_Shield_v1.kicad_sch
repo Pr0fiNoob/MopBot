@@ -2519,7 +2519,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+12V"
+		(symbol "power:+24V"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -2544,7 +2544,7 @@
 					)
 				)
 			)
-			(property "Value" "+12V"
+			(property "Value" "+24V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2576,7 +2576,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(property "Description" "Power symbol creates a global label with name \"+24V\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2598,7 +2598,7 @@
 					)
 				)
 			)
-			(symbol "+12V_0_1"
+			(symbol "+24V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -2636,7 +2636,7 @@
 					)
 				)
 			)
-			(symbol "+12V_1_1"
+			(symbol "+24V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -3209,16 +3209,16 @@
 		(uuid "10b418a8-08c7-4a5a-a624-826b2afe4f2a")
 	)
 	(junction
-		(at 80.01 15.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d68583e-fc0d-473b-b274-9a11f6889a3e")
-	)
-	(junction
 		(at 100.33 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "236d161b-bd78-4f7f-8124-edfa0b99b82c")
+	)
+	(junction
+		(at 82.55 20.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28b60b0a-6c24-4395-9a3b-7d7a2cb20384")
 	)
 	(junction
 		(at 31.75 46.99)
@@ -3237,6 +3237,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "42f65d1b-068c-4eec-8c20-f117f6c0c812")
+	)
+	(junction
+		(at 82.55 15.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47c3c48d-b8f0-4558-95a0-a72d943ef8a7")
 	)
 	(junction
 		(at 93.98 130.81)
@@ -3261,12 +3267,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f432d20-1ab6-4f38-a5bf-9d3b5c442d5c")
-	)
-	(junction
-		(at 80.01 20.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "95f61275-f400-462c-8896-fb45ffc9abda")
 	)
 	(junction
 		(at 261.62 128.27)
@@ -3311,10 +3311,6 @@
 	(no_connect
 		(at 19.05 36.83)
 		(uuid "4053f33a-47fb-4def-a6d0-926eae4ba238")
-	)
-	(no_connect
-		(at 74.93 80.01)
-		(uuid "57dc2a90-59bd-41e8-b9ca-7929fc2c53ae")
 	)
 	(no_connect
 		(at 21.59 72.39)
@@ -3396,16 +3392,6 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 15.24) (xy 85.09 15.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08d2a9e6-9f82-4adb-8a0c-90ae7229979b")
-	)
-	(wire
-		(pts
 			(xy 205.74 137.16) (xy 205.74 144.78)
 		)
 		(stroke
@@ -3466,7 +3452,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 15.24) (xy 80.01 15.24)
+			(xy 74.93 15.24) (xy 82.55 15.24)
 		)
 		(stroke
 			(width 0)
@@ -3503,6 +3489,16 @@
 			(type default)
 		)
 		(uuid "1d3ee049-a873-486b-bd41-76db4099fe3e")
+	)
+	(wire
+		(pts
+			(xy 82.55 15.24) (xy 87.63 15.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fb5bd64-3f57-4797-87b4-f0d5bc799804")
 	)
 	(wire
 		(pts
@@ -3726,6 +3722,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 20.32) (xy 87.63 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49a22464-01f2-469c-87ad-f36fc0f882b3")
+	)
+	(wire
+		(pts
 			(xy 62.23 39.37) (xy 158.75 39.37)
 		)
 		(stroke
@@ -3856,7 +3862,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 20.32) (xy 80.01 20.32)
+			(xy 74.93 20.32) (xy 82.55 20.32)
 		)
 		(stroke
 			(width 0)
@@ -4533,16 +4539,6 @@
 			(type solid)
 		)
 		(uuid "e7278977-132b-4777-9eb4-7d93363a4379")
-	)
-	(wire
-		(pts
-			(xy 80.01 20.32) (xy 85.09 20.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e72db5c3-4a59-4f00-a1fb-27a4e686b98b")
 	)
 	(wire
 		(pts
@@ -5664,6 +5660,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+24V")
+		(at 200.66 144.78 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0318b945-72b5-47b0-9634-75c6a851c19a")
+		(property "Reference" "#PWR010"
+			(at 200.66 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+24V"
+			(at 200.66 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 200.66 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e2b9d494-5476-4696-9123-2099ae974141")
+		)
+		(instances
+			(project "Motor_Shield_v1"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 93.98 139.7 180)
 		(unit 1)
@@ -5740,84 +5814,6 @@
 			(project "Motor_Shield_v1"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 200.66 144.78 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "077742b6-577f-468a-8e19-4e174729b5ce")
-		(property "Reference" "#PWR010"
-			(at 200.66 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+12V"
-			(at 200.66 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 200.66 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 200.66 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ce06d8b3-5a64-4ecc-b886-58657bbd56b3")
-		)
-		(instances
-			(project "Motor_Shield_v1"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -6395,6 +6391,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+24V")
+		(at 57.15 156.21 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "357163f8-ab0d-46d9-bad5-eed11658c820")
+		(property "Reference" "#PWR06"
+			(at 57.15 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+24V"
+			(at 57.15 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 57.15 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb4dab7b-42a7-47f1-8302-cb06be7c8890")
+		)
+		(instances
+			(project "Motor_Shield_v1"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 118.11 148.59 0)
 		(unit 1)
@@ -6467,84 +6541,6 @@
 			(project "Motor_Shield_v1"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 57.15 156.21 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "472926bc-51d8-4468-b0b1-5e576b465580")
-		(property "Reference" "#PWR06"
-			(at 57.15 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+12V"
-			(at 57.15 161.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.15 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 57.15 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 57.15 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "870d36bd-39ea-4e24-af74-51a40cc67caa")
-		)
-		(instances
-			(project "Motor_Shield_v1"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -6979,6 +6975,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+24V")
+		(at 87.63 15.24 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "620b36fd-6d02-456c-9bd3-826c66993244")
+		(property "Reference" "#PWR014"
+			(at 83.82 15.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+24V"
+			(at 91.44 15.2399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 15.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 15.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 87.63 15.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d91b571d-85ef-4cc7-bcb0-d6618297601b")
+		)
+		(instances
+			(project "Motor_Shield_v1"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_Small")
 		(at 125.73 26.67 180)
 		(unit 1)
@@ -7071,7 +7146,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 80.01 17.78 180)
+		(at 82.55 17.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7081,7 +7156,7 @@
 		(dnp no)
 		(uuid "6b9a7b62-f3aa-418a-8bf9-8726c7c16d84")
 		(property "Reference" "C7"
-			(at 76.708 17.78 0)
+			(at 85.852 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7091,7 +7166,7 @@
 			)
 		)
 		(property "Value" "680µF"
-			(at 84.836 17.78 0)
+			(at 77.724 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7101,7 +7176,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
-			(at 80.01 17.78 0)
+			(at 82.55 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7112,7 +7187,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 17.78 0)
+			(at 82.55 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7123,7 +7198,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 80.01 17.78 0)
+			(at 82.55 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7822,7 +7897,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 85.09 20.32 90)
+		(at 87.63 20.32 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7833,7 +7908,7 @@
 		(fields_autoplaced yes)
 		(uuid "bc15cfb9-3356-48cb-a3eb-59e781a6e894")
 		(property "Reference" "#PWR015"
-			(at 91.44 20.32 0)
+			(at 93.98 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7844,7 +7919,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 20.32 0)
+			(at 92.71 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7854,7 +7929,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 20.32 0)
+			(at 87.63 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7865,7 +7940,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 20.32 0)
+			(at 87.63 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7876,7 +7951,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 85.09 20.32 0)
+			(at 87.63 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7893,84 +7968,6 @@
 			(project "Motor_Shield_v1"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 85.09 15.24 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cad5116f-7bd6-49a4-bf29-538cf832b4e7")
-		(property "Reference" "#PWR014"
-			(at 81.28 15.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+12V"
-			(at 90.17 15.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 85.09 15.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 85.09 15.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 85.09 15.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d11ea0f8-b03b-4b9e-89e9-16cf29be8eee")
-		)
-		(instances
-			(project "Motor_Shield_v1"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -8295,7 +8292,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Barrel_Jack")
-		(at 66.04 17.78 0)
+		(at 67.31 17.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8305,7 +8302,7 @@
 		(dnp no)
 		(uuid "ed8eab40-19fe-4aee-a942-8d3041dee315")
 		(property "Reference" "J7"
-			(at 57.658 15.494 0)
+			(at 58.928 15.494 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8316,7 +8313,7 @@
 			)
 		)
 		(property "Value" "Barrel_Jack"
-			(at 49.022 18.796 0)
+			(at 50.292 18.796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8327,7 +8324,7 @@
 			)
 		)
 		(property "Footprint" "Connector_BarrelJack:BarrelJack_Horizontal"
-			(at 67.31 18.796 0)
+			(at 68.58 18.796 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8338,7 +8335,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.31 18.796 0)
+			(at 68.58 18.796 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8349,7 +8346,7 @@
 			)
 		)
 		(property "Description" "DC Barrel Jack"
-			(at 66.04 17.78 0)
+			(at 67.31 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
