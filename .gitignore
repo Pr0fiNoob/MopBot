@@ -34,5 +34,6 @@ obsidian/
 *.tmp
 
 # KiCad
-~*.lck
+*.lck
+*.kicad_prl
 PCBs/gerbers/
