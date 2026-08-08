@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 2.0,
-          "width": 2.0
+          "drill": 0.8,
+          "height": 1.6,
+          "width": 1.6
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -64,7 +64,7 @@
           "min_clearance": 0.508,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -229,7 +229,12 @@
         0.15,
         0.2,
         0.4,
-        0.6
+        0.6,
+        1.0,
+        1.2,
+        1.5,
+        2.0,
+        3.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -301,7 +306,28 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|266700|266700|6bd03990-0c6f-47aa-a191-9be4dd5032ee|00000000-0000-0000-0000-000000000000|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|292100|266700|fdd33dcf-399e-4ac6-99f5-9ccff615cf55|00000000-0000-0000-0000-000000000000|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|317500|266700|25f7f7e2-1fc6-41d8-a14b-2d2742e98c50|00000000-0000-0000-0000-000000000000|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|317500|520700|87fd47b6-2ebb-4b03-a4f0-be8b5717bf68|00000000-0000-0000-0000-000000000000|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|571500|1562100|bb4dab7b-42a7-47f1-8302-cb06be7c8890|00000000-0000-0000-0000-000000000000|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
